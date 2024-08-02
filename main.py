@@ -2,9 +2,9 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['POST'])
 def index():
-  return render_template('index.html')
+  return '<h1>Welcome!!!</h1>'
 
 if __name__ == '__main__':
   app.run(port=5000)
